@@ -1,0 +1,127 @@
+* {
+    margin: 0;   
+}
+
+/* WHOLE CONTAINER */
+
+.container {
+        height: 100vh;
+        display: grid;
+        grid-template:
+                    "header header header" 40px
+                    "left   middle right" 1fr /
+                     100px    1fr    200px;
+}
+
+/* TOP BAR */
+
+.top {
+    grid-area: header;
+    background-color: aqua;
+    display: grid;
+    grid-template: 
+                "gmail search nav" 40px /
+                100px  1fr    200px;
+
+}
+
+
+.gmail {
+    grid-area: gmail;
+    background-color: rgb(218, 193, 185);
+}
+
+.search {
+    grid-area: search;
+    background-color: cornsilk;
+}  
+
+.top-right-navigation {
+    grid-area: nav;
+    background-color: rgb(226, 225, 216);
+
+
+}
+/* LEFT SECTION */
+
+.left {
+    grid-area: left;
+    background-color: rgb(0, 98, 255);
+    display: grid;
+    grid-template: 
+                "Navigation" 1fr
+                "Meetings" 100px
+                "Chat" 60px /
+                100px;
+}
+
+.meetings {
+    grid-area: Meetings;
+    background-color:rgb(122, 144, 180)
+}
+
+.chat {
+    grid-area: Chat;
+    background-color:rgb(92, 139, 209)
+}
+
+/* MIDDLE SECTION */
+
+.middle {
+    grid-area: middle;
+    background-color: rgb(238, 238, 238);
+
+}
+
+/* RIGHT SECTION */
+
+.right {
+    grid-area: right;
+    background-color: coral;
+
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1100px) {
+
+    .container {   
+        
+        grid-template:
+                    "header header" 40px
+                    "left   middle" 1fr /
+                    100px     1fr;    
+                    }
+    
+    .right {
+        display: none;
+    }
+    
+    }
+    
+@media screen and (max-width: 600px) { 
+    
+        .container {   
+            
+            grid-template:
+                            "header" 40px
+                            "middle" 1fr /
+                             1fr;    
+            }
+        
+        .left {
+            display: none;
+        }
+        
+        }
+        
+    
+
+
+
+
+
+
+
+
+
